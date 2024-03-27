@@ -5,15 +5,22 @@ public class Car {
     private const int SPEED_DECREMENT = 10;
     private const int MIN_SPEED = 0;
 
-
+    private int minAgeToDriveTheCar;
     private String model;
     private String color;
     private int currentSpeed;
 
-    public Car(String model, String color) {
+
+
+    public Car(String model, String color, int minAgeToDriveTheCar) {
         this.model = model;
         this.color = color;
         this.currentSpeed = MIN_SPEED;
+        this.minAgeToDriveTheCar = minAgeToDriveTheCar;
+    }
+
+    public void start() {
+
     }
 
     public int getCurrentSpeed() {

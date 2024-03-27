@@ -1,24 +1,21 @@
-public class Driver {
+public class Driver extends ObservableDriver{
 
-    private const int AGE_LIMIT = 10;
 
     private String name;
     private int age;
+
 
     public Driver(String name, int years) {
         this.name = name;
         this.age = years;
     }
 
-    public boolean isOld() {
-        return age >= AGE_LIMIT;
-    }
 
-    public void startCar(Car car) {
-        if (isOld()) {
-            System.out.println(name + " démarre la car.");
-        } else {
-            System.out.println("Le conducteur n'est pas assez âgé pour conduire.");
+    public void turnKey() {
+        try {
+            this.startCar();
+        } catch (String e) {
+            System.out.println("La voiture ne démarre pas : " + e);
         }
     }
 
