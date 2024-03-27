@@ -23,11 +23,12 @@ public class Driver {
     }
 
     public void stopCar(Voiture voiture) {
+
         System.out.println(name + " arrête la voiture.");
+
     }
 
     public void changeSpeed(Car car, int newSpeed) {
-        System.out.println(name + " change la vitesse de la car à " + newSpeed);
         int currentSpeed;
         if (car.getCurrentSpeed() >= newSpeed) {
             while (car.getCurrentSpeed() > newSpeed) {
