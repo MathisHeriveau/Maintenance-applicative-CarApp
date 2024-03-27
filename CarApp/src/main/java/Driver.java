@@ -1,4 +1,7 @@
 public class Driver {
+
+    private const int AGE_LIMIT = 10;
+
     private String name;
     private int age;
 
@@ -8,7 +11,7 @@ public class Driver {
     }
 
     public boolean isOld() {
-        return age >= 10;
+        return age >= AGE_LIMIT;
     }
 
     public void startCar(Car car) {

@@ -1,5 +1,11 @@
 public class Car {
 
+    private const int MAX_SPEED = 120;
+    private const int SPEED_INCREMENT = 10;
+    private const int SPEED_DECREMENT = 10;
+    private const int MIN_SPEED = 0;
+
+
     private String model;
     private String color;
     private int currentSpeed;
@@ -7,7 +13,7 @@ public class Car {
     public Car(String model, String color) {
         this.model = model;
         this.color = color;
-        this.currentSpeed = 0;
+        this.currentSpeed = MIN_SPEED;
     }
 
     public int getCurrentSpeed() {
@@ -15,8 +21,8 @@ public class Car {
     }
 
     public void speedUp() {
-        if (currentSpeed + 10 <= 120) {
-            currentSpeed += 10;
+        if (currentSpeed + SPEED_INCREMENT <= MAX_SPEED) {
+            currentSpeed += SPEED_INCREMENT;
             // afficher détails
             System.out.println("Modèle : " + model);
             System.out.println("Couleur : " + color);
@@ -27,8 +33,8 @@ public class Car {
     }
 
     public void slowDown() {
-        if (currentSpeed - 10 >= 0) {
-            currentSpeed -= 10;
+        if (currentSpeed - SPEED_DECREMENT >= MIN_SPEED) {
+            currentSpeed -= SPEED_DECREMENT;
             // afficher détails
             System.out.println("Modèle : " + model);
             System.out.println("Couleur : " + color);
